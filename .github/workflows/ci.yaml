@@ -54,7 +54,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: Grants permisions
-        run: chmod +x ./version.sh
+        run: chmod +x ./bin/version.sh
 
       - name: Change version
         id: version
