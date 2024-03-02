@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: app-jar
-          path: ./target/AuthRmi-1.0-SNAPSHOT.jar
+          path: ./target/rmi-interfaces-1.0-SNAPSHOT.jar
 
   version:
     runs-on: ubuntu-latest
@@ -92,11 +92,11 @@ jobs:
           path: .
 
       - name: Rename Jar
-        run: mv ./AuthRmi-1.0-SNAPSHOT.jar ./AuthRmi-${{ needs.version.outputs.new_version }}.jar
+        run: mv ./rmi-interfaces-1.0-SNAPSHOT.jar ./rmi-interfaces-${{ needs.version.outputs.new_version }}.jar
 
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ needs.version.outputs.new_version }}
           files: |
-            ./AuthRmi-${{ needs.version.outputs.new_version }}.jar
+            ./rmi-interfaces-${{ needs.version.outputs.new_version }}.jar
