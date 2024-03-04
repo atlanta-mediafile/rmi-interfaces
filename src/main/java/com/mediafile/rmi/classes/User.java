@@ -4,11 +4,13 @@
  */
 package com.mediafile.rmi.classes;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Dego
  */
-public class User {
+public class User implements Serializable {
     
     private final String username;
     private final String fullName;
