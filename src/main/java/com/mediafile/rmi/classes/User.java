@@ -12,18 +12,18 @@ import java.io.Serializable;
  */
 public class User implements Serializable {
     
-    private final String username;
+    private final String id;
     private final String fullName;
     private final String email;
 
-    public User(String username, String fullname, String email) {
-        this.username = username;
+    public User(String id, String fullname, String email) {
+        this.id = id;
         this.fullName = fullname;
         this.email = email;
     }
 
-    public String getUsername() {
-        return username;
+    public String getId() {
+        return id;
     }
 
     public String getFullName() {

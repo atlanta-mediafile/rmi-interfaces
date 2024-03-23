@@ -12,16 +12,16 @@ import java.io.Serializable;
  */
 public class LoginArgs implements Serializable {
     
-    private final String username;
+    private final String email;
     private final String password;
 
     public LoginArgs(String username, String password) {
-        this.username = username;
+        this.email = username;
         this.password = password;
     }
 
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
 
     public String getPassword() {
