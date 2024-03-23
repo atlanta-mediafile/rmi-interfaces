@@ -34,9 +34,9 @@ public interface IAuthProvider extends Remote {
     public Response<User> GetUser(String userId) throws RemoteException;
     
     /**
-     *  Login with username and password
+     *  Login with email and password
      * @param loginArgs
-     * @return response with token
+     * @return response jwt
      * @throws RemoteException
      */
     public Response<String> Login(LoginArgs loginArgs) throws RemoteException;
@@ -44,7 +44,7 @@ public interface IAuthProvider extends Remote {
     /**
      *  Register with username, fullname, email and password
      * @param registerArgs
-     * @return response with token
+     * @return response jwt
      * @throws RemoteException
      */
     public Response<String> Register(RegisterArgs registerArgs) throws RemoteException;

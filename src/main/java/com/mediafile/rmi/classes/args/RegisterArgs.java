@@ -12,20 +12,27 @@ import java.io.Serializable;
  */
 public class RegisterArgs implements Serializable {
     
+    private final String id;
     private final String username;
     private final String email;
     private final String password;
     
     public RegisterArgs(
+        String id,
         String username,
         String email,
         String password
     ) {
+        this.id = id;
         this.username = username;
         this.email = email;
         this.password = password;
     }
 
+    public String getId() {
+        return id;
+    }
+    
     public String getUsername() {
         return this.username;
     }

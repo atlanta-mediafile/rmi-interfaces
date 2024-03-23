@@ -9,6 +9,7 @@ import java.io.Serializable;
 /**
  *
  * @author Dego
+ * @param <T>
  */
 public class Response<T> implements Serializable {
     
@@ -16,10 +17,36 @@ public class Response<T> implements Serializable {
     private final boolean success;
     private final T data;
 
+    /**
+     *  Consturctor for set all response attributes
+     * @param errors
+     * @param success
+     * @param data
+     */
     public Response(String[] errors, boolean success, T data) {
         this.errors = errors;
         this.success = success;
         this.data = data;
+    }
+    
+    /**
+     *  Constructor for 'ok' response
+     * @param data
+     */
+    public Response(T data) {
+        this.errors = new String[]{};
+        this.success = true;
+        this.data = data;
+    }
+    
+    /**
+     *  Constructor for 'error' response
+     * @param errors
+     */
+    public Response(String[] errors) {
+        this.errors = errors;
+        this.success = false;
+        this.data = null;
     }
 
     public String[] getErrors() {
