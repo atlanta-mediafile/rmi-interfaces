@@ -13,18 +13,18 @@ import java.io.Serializable;
 public class RegisterArgs implements Serializable {
     
     private final String id;
-    private final String username;
+    private final String fullname;
     private final String email;
     private final String password;
     
     public RegisterArgs(
         String id,
-        String username,
+        String fullname,
         String email,
         String password
     ) {
         this.id = id;
-        this.username = username;
+        this.fullname = fullname;
         this.email = email;
         this.password = password;
     }
@@ -33,8 +33,8 @@ public class RegisterArgs implements Serializable {
         return id;
     }
     
-    public String getUsername() {
-        return this.username;
+    public String getFullname() {
+        return this.fullname;
     }
 
     public String getEmail() {
