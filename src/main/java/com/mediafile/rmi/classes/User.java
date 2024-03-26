@@ -15,11 +15,21 @@ public class User implements Serializable {
     private final String id;
     private final String fullName;
     private final String email;
+    private final String password;
+    
 
     public User(String id, String fullname, String email) {
         this.id = id;
         this.fullName = fullname;
         this.email = email;
+        this.password = null;
+    }
+    
+    public User(String id, String fullname, String email, String password) {
+        this.id = id;
+        this.fullName = fullname;
+        this.email = email;
+        this.password = password;
     }
 
     public String getId() {
@@ -32,6 +42,10 @@ public class User implements Serializable {
 
     public String getEmail() {
         return email;
+    }
+
+    public String getPassword() {
+        return password;
     }
     
 }
