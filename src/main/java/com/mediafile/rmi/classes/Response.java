@@ -12,6 +12,7 @@ import java.io.Serializable;
  * @param <T>
  */
 public class Response<T> implements Serializable {
+    private static final long serialVersionUID = 1113799434508676095L;
     
     private final String[] errors;
     private final boolean success;
