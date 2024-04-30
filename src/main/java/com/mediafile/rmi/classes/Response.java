@@ -39,16 +39,6 @@ public class Response<T> implements Serializable {
         this.success = true;
         this.data = data;
     }
-    
-    /**
-     *  Constructor for 'error' response
-     * @param errors
-     */
-    public Response(String[] errors) {
-        this.errors = errors;
-        this.success = false;
-        this.data = null;
-    }
 
     public String[] getErrors() {
         return errors;
